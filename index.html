@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Privacy Policy, data choices, and support information for the AI Wardrobe iOS app.">
+  <meta name="description" content="Privacy Policy, data choices, and support information for the Elnoly iOS app.">
   <meta name="theme-color" content="#f7f4ee">
-  <meta property="og:title" content="AI Wardrobe — Privacy Policy">
-  <meta property="og:description" content="Clear information about what AI Wardrobe processes, why, and how you stay in control.">
+  <meta property="og:title" content="Elnoly — Privacy Policy">
+  <meta property="og:description" content="Clear information about what Elnoly processes, why, and how you stay in control.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://petrsalsa-svg.github.io/AIWardrobe-Privacy/">
-  <link rel="canonical" href="https://petrsalsa-svg.github.io/AIWardrobe-Privacy/">
-  <link rel="alternate" hreflang="en" href="https://petrsalsa-svg.github.io/AIWardrobe-Privacy/">
-  <link rel="alternate" hreflang="cs" href="https://petrsalsa-svg.github.io/AIWardrobe-Privacy/cs/">
+  <meta property="og:url" content="https://petrsalsa-svg.github.io/Elnoly-Privacy/">
+  <link rel="canonical" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/">
+  <link rel="alternate" hreflang="en" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/">
+  <link rel="alternate" hreflang="cs" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/cs/">
   <link rel="stylesheet" href="./assets/styles.css">
   <script src="./assets/site.js" defer></script>
-  <title>AI Wardrobe — Privacy Policy</title>
+  <title>Elnoly — Privacy Policy</title>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="./" aria-label="AI Wardrobe privacy home">AI Wardrobe</a>
+      <a class="brand" href="./" aria-label="Elnoly privacy home">Elnoly</a>
       <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="./" aria-current="page">Privacy</a>
         <a href="./data-choices/">Data choices</a>
@@ -47,7 +47,7 @@
         <div class="seam" aria-hidden="true"></div>
         <div class="hero-copy">
           <h1 id="hero-title">Your wardrobe.<br>Your data.</h1>
-          <p class="hero-lede">Clear information about what AI Wardrobe processes, why, and how you stay in control.</p>
+          <p class="hero-lede">Clear information about what Elnoly processes, why, and how you stay in control.</p>
           <div class="actions">
             <a class="button button-primary" href="#privacy-policy">Read the privacy policy <span aria-hidden="true">→</span></a>
             <a class="button button-secondary" href="./data-choices/">Manage your data</a>
@@ -99,7 +99,7 @@
         <article class="policy-article">
           <div class="policy-heading">
             <h2 id="policy-title">Privacy Policy</h2>
-            <p class="updated">Last updated: August 4, 2026</p>
+            <p class="updated">Last updated: August 9, 2026</p>
           </div>
 
           <details class="mobile-toc">
@@ -119,8 +119,8 @@
 
           <section id="what-we-process">
             <h3>What we process</h3>
-            <p>This Privacy Policy applies to the AI Wardrobe iOS app, its supporting API, and this privacy website. AI Wardrobe is operated by an independent developer. The contact for the data controller is <a href="mailto:Petr.salsa@icloud.com">Petr.salsa@icloud.com</a>.</p>
-            <p>AI Wardrobe is designed to keep most of your information on your device. We do not require an account, sell personal data, serve advertising, or track you across apps or websites.</p>
+            <p>This Privacy Policy applies to the Elnoly iOS app, its supporting API, and this privacy website. Elnoly is operated by an independent developer. The contact for the data controller is <a href="mailto:Petr.salsa@icloud.com">Petr.salsa@icloud.com</a>.</p>
+            <p>Elnoly is designed to keep most of your information on your device. Sign in with Apple creates a pseudonymous Elnoly account used for paid AI features, App Attest security, purchases, support lookup, and account deletion. We do not sell personal data, serve advertising, or track you across apps or websites.</p>
 
             <h4>Information kept on your device</h4>
             <ul>
@@ -128,6 +128,7 @@
               <li>Outfits, planning dates, wear history, item usage counts, and related notes.</li>
               <li>Style interactions, preferences, stylist memory, recommendations, and locally cached results.</li>
               <li>Purchase entitlement status supplied through Apple StoreKit. We do not receive your payment card details.</li>
+              <li>The app session, App Attest device state, and support ID needed to use and manage the pseudonymous server account.</li>
             </ul>
             <p>Depending on your Apple device and backup settings, local app data may be included in an encrypted device or iCloud backup controlled by Apple.</p>
 
@@ -135,7 +136,8 @@
             <ul>
               <li>Photos you intentionally select when using AI clothing analysis or catalog-image creation.</li>
               <li>Garment metadata and random item identifiers needed to generate outfit recommendations. Stylist requests do not include wardrobe photos.</li>
-              <li>Weather context, occasion, style preferences, and recent-wear information needed for a requested recommendation. Exact location is not sent to the AI Wardrobe backend.</li>
+              <li>Weather context, occasion, style preferences, and recent-wear information needed for a requested recommendation. Exact location is not sent to the Elnoly backend.</li>
+              <li>Sign in with Apple identity tokens are sent to the Elnoly API for verification. We store a one-way HMAC hash of the Apple user identifier, not your Apple password or payment details.</li>
               <li>Operational records such as request time, operation, model, success or error status, provider request ID, token usage, estimated cost, and limited derived clothing-analysis fields.</li>
               <li>A one-way hash of the network IP address, grouped into one-minute windows, used only to prevent abuse and excessive requests. We do not store the raw IP address in our application database.</li>
             </ul>
@@ -143,22 +145,24 @@
 
           <section id="ai-features">
             <h3>How AI features work</h3>
-            <p>AI features are optional and run only when you choose to use them. Selected photos or relevant wardrobe metadata are encrypted in transit and sent to the dedicated AI Wardrobe API hosted on Cloudflare. The API sends the minimum content needed for the requested task to OpenAI.</p>
+            <p>AI features are optional and run only when you choose to use them. Selected photos or relevant wardrobe metadata are encrypted in transit and sent to the dedicated Elnoly API hosted on Cloudflare at <code>elnoly-api</code>. The API sends the minimum content needed for the requested task to OpenAI.</p>
             <ul>
               <li><strong>Clothing analysis:</strong> the selected photo is processed to identify visible garments and their attributes.</li>
               <li><strong>Catalog-image creation:</strong> a selected garment crop is processed to produce a clean catalog presentation and checked against the source for identity consistency.</li>
+              <li><strong>Inspiration analysis:</strong> an inspiration image you choose is analyzed once to extract style signals. The image is not stored by the Elnoly backend.</li>
+              <li><strong>Product import:</strong> when you paste a public shop link, the Elnoly API fetches the public product page and image metadata to help you review or assess the item.</li>
               <li><strong>Outfit stylist:</strong> shortlisted garment metadata, random item IDs, weather context, occasion, and relevant preferences are processed. Wardrobe photos are not sent for stylist recommendations.</li>
             </ul>
             <div class="notice">
-              <p><strong>Photos are not stored in the AI Wardrobe usage database or written to application logs.</strong> In the current iOS flow, they are passed through server memory to fulfill the request and the returned result is saved locally on your device.</p>
+              <p><strong>Photos are not stored in the Elnoly usage database or written to application logs.</strong> AI analysis and catalog requests pass through server memory to fulfill the request. Private image uploads, when used by the app, are stored in the private Cloudflare R2 bucket <code>elnoly-images</code> under a pseudonymous user prefix so they can be deleted with your account.</p>
             </div>
             <p>OpenAI states that API data is not used to train its models unless the API customer explicitly opts in. OpenAI may retain API abuse-monitoring logs, which can include submitted content, for up to 30 days unless legal or security requirements require longer retention. See <a href="https://platform.openai.com/docs/models/default-usage-policies-by-endpoint" rel="external">OpenAI platform data controls</a>.</p>
           </section>
 
           <section id="location-weather">
             <h3>Location and weather</h3>
-            <p>With your permission, AI Wardrobe requests location only while the app is in use and asks iOS for kilometer-level accuracy. The location is sent through Apple WeatherKit to retrieve local weather for outfit suggestions. AI Wardrobe does not store your location and does not send it to the AI Wardrobe backend or OpenAI.</p>
-            <p>Apple states that WeatherKit location information is used to provide forecasts, is not associated with personally identifiable information, and is not tracked between requests. You can revoke access at any time in iOS Settings. See <a href="https://developer.apple.com/weatherkit/" rel="external">Apple WeatherKit</a>.</p>
+            <p>With your permission, Elnoly requests location only while the app is in use and asks iOS for kilometer-level accuracy. The app first uses Apple WeatherKit for local weather. If WeatherKit fails, the app rounds latitude and longitude to about one kilometer and sends that approximate location directly to Open-Meteo for a fallback forecast. Elnoly does not store your location and does not send it to the Elnoly backend or OpenAI.</p>
+            <p>You can revoke access at any time in iOS Settings. See <a href="https://developer.apple.com/weatherkit/" rel="external">Apple WeatherKit</a> and <a href="https://open-meteo.com/en/terms" rel="external">Open-Meteo terms</a>.</p>
           </section>
 
           <section id="service-providers">
@@ -168,21 +172,23 @@
               <table>
                 <thead><tr><th>Provider</th><th>Purpose</th><th>Information involved</th></tr></thead>
                 <tbody>
-                  <tr><td>Cloudflare</td><td>API hosting, encrypted transport, rate limiting, database, and security</td><td>Requests, selected AI content in transit, technical records, hashed network identifier</td></tr>
+                  <tr><td>Cloudflare</td><td>API hosting, encrypted transport, App Attest verification support, rate limiting, D1 database, private R2 storage, and security</td><td>Requests, selected AI content in transit, technical records, pseudonymous account records, hashed network identifier, and private uploaded images when used</td></tr>
                   <tr><td>OpenAI</td><td>Clothing analysis, catalog-image processing, identity verification, and outfit recommendations</td><td>Selected photos or the minimum wardrobe metadata needed for the requested AI feature</td></tr>
                   <tr><td>Apple</td><td>Location permission, WeatherKit forecasts, StoreKit purchases, and optional device backups</td><td>Location for weather, purchase transactions, and backup data according to your Apple settings</td></tr>
+                  <tr><td>Open-Meteo</td><td>Fallback weather forecasts when WeatherKit is unavailable</td><td>Approximate rounded location sent directly from the app</td></tr>
                   <tr><td>GitHub</td><td>Hosting this public privacy and support website</td><td>GitHub logs visitor IP addresses for security; this website adds no analytics or advertising trackers</td></tr>
                 </tbody>
               </table>
             </div>
-            <p>Providers may process data in countries outside your own. Where required, they use contractual and legal safeguards for international transfers. Their policies are available from <a href="https://www.cloudflare.com/privacypolicy/" rel="external">Cloudflare</a>, <a href="https://openai.com/policies/privacy-policy/" rel="external">OpenAI</a>, <a href="https://www.apple.com/legal/privacy/" rel="external">Apple</a>, and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="external">GitHub</a>.</p>
+            <p>Providers may process data in countries outside your own. Where required, they use contractual and legal safeguards for international transfers. Their policies are available from <a href="https://www.cloudflare.com/privacypolicy/" rel="external">Cloudflare</a>, <a href="https://openai.com/policies/privacy-policy/" rel="external">OpenAI</a>, <a href="https://www.apple.com/legal/privacy/" rel="external">Apple</a>, <a href="https://open-meteo.com/en/terms" rel="external">Open-Meteo</a>, and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="external">GitHub</a>.</p>
           </section>
 
           <section id="retention-deletion">
             <h3>Retention and deletion</h3>
             <ul>
-              <li><strong>Local wardrobe data:</strong> remains on your device until you delete individual items, use “Delete all local data,” uninstall the app, or remove applicable backups through Apple.</li>
-              <li><strong>Photos handled by our API:</strong> are not retained in our database or application object storage by the current iOS AI flow. OpenAI may retain abuse-monitoring data for up to 30 days as described above.</li>
+              <li><strong>Local wardrobe data:</strong> remains on your device until you delete individual items, use “Delete all local data,” delete your account from the Profile screen, uninstall the app, or remove applicable backups through Apple.</li>
+              <li><strong>Server account data:</strong> app sessions, App Attest records, style profile data, and the pseudonymous account record remain until they expire, are rotated, or you delete your account in the app.</li>
+              <li><strong>Photos handled by our API:</strong> AI analysis photos are not retained in our usage database or application logs. Private image uploads, when used, are stored in R2 under your pseudonymous user prefix and are deleted when you delete your account. OpenAI may retain abuse-monitoring data for up to 30 days as described above.</li>
               <li><strong>Technical usage records:</strong> are retained for up to 90 days for reliability, cost control, security, and troubleshooting, then deleted.</li>
               <li><strong>Hashed rate-limit records:</strong> are retained for up to 48 hours, then deleted.</li>
               <li><strong>Support email:</strong> is retained for as long as needed to resolve the request and normally no longer than 24 months after the last communication, unless a longer period is legally required.</li>
@@ -192,16 +198,16 @@
 
           <section id="choices-rights">
             <h3>Your choices and rights</h3>
-            <p>You control whether AI Wardrobe can access Photos, Camera, and Location. You can revoke these permissions in iOS Settings and continue using features that do not require them. You can delete individual wardrobe items, stylist preferences, or all local data from inside the app.</p>
-            <p>Depending on your region, you may have rights to access, correct, delete, restrict, or object to processing of personal data; receive a portable copy where applicable; withdraw consent; and lodge a complaint with your local data-protection authority. To make a request, email <a href="mailto:Petr.salsa@icloud.com?subject=AI%20Wardrobe%20privacy%20request">Petr.salsa@icloud.com</a>.</p>
-            <p>Because AI Wardrobe has no user accounts and stores only limited pseudonymous operational records, we may not be able to connect a technical record to you. We may request limited information necessary to verify and locate a record, and we will not ask for your wardrobe photos or sensitive information.</p>
+            <p>You control whether Elnoly can access Photos, Camera, and Location. You can revoke these permissions in iOS Settings and continue using features that do not require them. You can delete individual wardrobe items, stylist preferences, all local data, or the full Elnoly account from inside the app.</p>
+            <p>Depending on your region, you may have rights to access, correct, delete, restrict, or object to processing of personal data; receive a portable copy where applicable; withdraw consent; and lodge a complaint with your local data-protection authority. To make a request, email <a href="mailto:Petr.salsa@icloud.com?subject=Elnoly%20privacy%20request">Petr.salsa@icloud.com</a>.</p>
+            <p>For support or privacy lookup, use the anonymous Support ID shown in Profile after Sign in with Apple. Because Elnoly stores pseudonymous records and no readable Apple identity, this Support ID helps us locate your account without asking for wardrobe photos or sensitive information.</p>
             <h4>Legal grounds</h4>
             <p>Where the GDPR or similar law applies, optional permissions and AI-photo processing rely on your request and consent; delivering requested app features is necessary to provide the service; and limited security, rate-limiting, and reliability records rely on legitimate interests in operating and protecting the service. You may withdraw consent by revoking a permission or not using the optional feature.</p>
           </section>
 
           <section id="children">
             <h3>Children</h3>
-            <p>AI Wardrobe is not directed to children under 13 or the minimum age required by local law. We do not knowingly collect personal data from children. If you believe a child has provided personal data, contact us and we will investigate and delete it where required.</p>
+            <p>Elnoly is not directed to children under 13 or the minimum age required by local law. We do not knowingly collect personal data from children. If you believe a child has provided personal data, contact us and we will investigate and delete it where required.</p>
           </section>
 
           <section id="changes">
@@ -213,7 +219,7 @@
             <h3>Contact</h3>
             <p>Questions, support requests, or privacy requests can be sent to:</p>
             <div class="contact-block">
-              <strong>AI Wardrobe — independent developer</strong><br>
+              <strong>Elnoly — independent developer</strong><br>
               Email: <a href="mailto:Petr.salsa@icloud.com">Petr.salsa@icloud.com</a><br>
               GitHub: <a href="https://github.com/petrsalsa-svg" rel="external">@petrsalsa-svg</a>
             </div>
@@ -243,12 +249,12 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand"><a class="brand" href="./">AI Wardrobe</a><p>Your wardrobe. Your data.</p></div>
+      <div class="footer-brand"><a class="brand" href="./">Elnoly</a><p>Your wardrobe. Your data.</p></div>
       <div class="footer-meta">
         <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="./">Privacy</a><a href="./data-choices/">Data choices</a><a href="./support/">Support</a><a href="https://github.com/petrsalsa-svg/AIWardrobe-Privacy">GitHub</a>
+          <a href="./">Privacy</a><a href="./data-choices/">Data choices</a><a href="./support/">Support</a><a href="https://github.com/petrsalsa-svg/Elnoly-Privacy">GitHub</a>
         </nav>
-        <p class="copyright">© 2026 AI Wardrobe. The Apple Standard EULA applies to the iOS app.</p>
+        <p class="copyright">© 2026 Elnoly. The Apple Standard EULA applies to the iOS app.</p>
       </div>
     </div>
   </footer>

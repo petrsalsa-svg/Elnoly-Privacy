@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://petrsalsa-svg.github.io/AIWardrobe-Privacy/sitemap.xml
+Sitemap: https://petrsalsa-svg.github.io/Elnoly-Privacy/sitemap.xml

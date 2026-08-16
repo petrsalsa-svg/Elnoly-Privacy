@@ -99,7 +99,7 @@
         <article class="policy-article">
           <div class="policy-heading">
             <h2 id="policy-title">Zásady ochrany soukromí</h2>
-            <p class="updated">Aktualizováno: 9. srpna 2026</p>
+            <p class="updated">Aktualizováno: 16. srpna 2026</p>
           </div>
 
           <details class="mobile-toc">
@@ -126,15 +126,15 @@
             <ul>
               <li>Fotografie šatníku a údaje o oblečení, například název, kategorie, barvy, vzor, materiál, značka, velikost, cena, datum nákupu, poznámky, oblíbené a archivace.</li>
               <li>Outfity, plánovaná data, historie nošení, počty použití a související poznámky.</li>
-              <li>Reakce na doporučení, preference, paměť stylisty, doporučení a lokálně uložené výsledky.</li>
+              <li>Reakce na doporučení, preference, volitelné strukturované profily proporcí a personal color, paměť stylisty, doporučení a lokálně uložené výsledky. Zdrojové fotografie použité k odhadu těchto profilů Elnoly neukládá.</li>
               <li>Stav předplatného poskytnutý přes Apple StoreKit. Údaje o platební kartě nedostáváme.</li>
               <li>Aplikační session, stav App Attest zařízení a ID podpory potřebné k používání a správě pseudonymního serverového účtu.</li>
             </ul>
-            <p>Podle nastavení zařízení a záloh Apple mohou být lokální data aplikace součástí šifrované zálohy zařízení nebo iCloudu, kterou spravuje Apple.</p>
+            <p>Údaje o kusech a katalogové fotografie se zálohují do soukromého úložiště Elnoly pod pseudonymním účtem pouze tehdy, když zapneš Zálohu šatníku v Profil → Soukromí a data. Výchozí stav je vypnutý. Podle nastavení zařízení a záloh Apple mohou být lokální data navíc součástí šifrované zálohy zařízení nebo iCloudu, kterou spravuje Apple.</p>
 
             <h4>Údaje zpracované naší službou</h4>
             <ul>
-              <li>Fotografie, které výslovně vybereš při použití AI rozpoznání oblečení nebo tvorby katalogového obrázku.</li>
+              <li>Fotografie, které výslovně vybereš při použití AI rozpoznání oblečení, tvorby katalogového obrázku, volitelného profilu proporcí nebo volitelného odhadu personal color, a katalogové fotografie s údaji o kusech uložené po zapnutí zálohy a obnovy šatníku.</li>
               <li>Metadata oblečení a náhodná ID položek potřebná k doporučení outfitu. Doporučení stylisty neobsahuje fotografie šatníku.</li>
               <li>Kontext počasí, příležitost, stylové preference a informace o nedávném nošení potřebné pro vyžádané doporučení. Přesná poloha se na backend Elnoly neposílá.</li>
               <li>Apple identity tokeny z přihlášení přes Apple se posílají do API Elnoly k ověření. Ukládáme jednosměrný HMAC hash Apple identifikátoru, ne Apple heslo ani platební údaje.</li>
@@ -150,11 +150,14 @@
               <li><strong>Rozpoznání oblečení:</strong> vybraná fotografie se zpracuje pro rozpoznání viditelných kusů a jejich vlastností.</li>
               <li><strong>Katalogový obrázek:</strong> výřez kusu se zpracuje do čisté katalogové podoby a následně se porovná se zdrojem kvůli zachování identity oblečení.</li>
               <li><strong>Analýza inspirace:</strong> inspirační obrázek, který vybereš, se jednorázově zpracuje pro získání stylových signálů. Backend Elnoly ho neukládá.</li>
+              <li><strong>Profil proporcí:</strong> pokud výslovně zvolíš odhad z fotografie, jedna fotografie celé postavy se jednorázově zpracuje na široké proporce užitečné pro oblečení. Elnoly fotografii neukládá; v iPhonu zůstane jen omezený strukturovaný profil používaný jako měkké stylingové vodítko.</li>
+              <li><strong>Odhad personal color:</strong> pokud si ho výslovně vyžádáš, jedna fotografie obličeje a krku zpředu se jednorázově zpracuje na orientační 12sezónní barevný typ a míru jistoty. Elnoly fotografii neukládá; v iPhonu zůstane jen strukturovaný odhad. Funkce tě neidentifikuje a neodvozuje etnicitu, zdraví ani atraktivitu; kdykoli ji lze nahradit ručně zadaným profesionálním výsledkem.</li>
               <li><strong>Import produktu:</strong> při vložení veřejného odkazu na e-shop API Elnoly načte veřejnou produktovou stránku a metadata obrázku, aby šlo položku zkontrolovat nebo posoudit.</li>
               <li><strong>Outfitový stylista:</strong> zpracují se metadata předvybraných kusů, náhodná ID, kontext počasí, příležitost a relevantní preference. Fotografie šatníku se stylistovi neposílají.</li>
+              <li><strong>Optická kontrola outfitu:</strong> při vizuální kontrole vygenerovaného nebo ručně složeného outfitu aplikace vytvoří dočasný náhled z katalogových fotografií na bílém pozadí a pošle ho AI bez fotografie osoby. Náhled se neukládá do zálohy šatníku ani databáze spotřeby.</li>
             </ul>
             <div class="notice">
-              <p><strong>Fotografie se neukládají do databáze spotřeby Elnoly ani do aplikačních logů.</strong> AI analýzy a katalogové požadavky projdou pamětí serveru pouze pro splnění požadavku. Soukromé uploady obrázků, pokud je aplikace použije, se ukládají do privátního Cloudflare R2 bucketu <code>elnoly-images</code> pod pseudonymním uživatelským prefixem, aby je bylo možné smazat spolu s účtem.</p>
+              <p><strong>Fotografie se neukládají do databáze spotřeby Elnoly ani do aplikačních logů.</strong> Zdrojové fotografie pro AI analýzu a katalogové požadavky projdou pamětí serveru pouze pro splnění požadavku. Když zapneš Zálohu šatníku, výsledné katalogové fotografie se ukládají do privátního Cloudflare R2 bucketu <code>elnoly-images</code> pod tvým pseudonymním uživatelským prefixem. Samotné zálohování je neposílá OpenAI.</p>
             </div>
             <p>OpenAI uvádí, že data z API nepoužívá k trénování modelů, pokud se zákazník API výslovně nepřihlásí ke sdílení. OpenAI může uchovávat bezpečnostní logy API, které mohou obsahovat odeslaný obsah, po dobu až 30 dnů, pokud právní nebo bezpečnostní požadavky nevyžadují delší dobu. Viz <a href="https://platform.openai.com/docs/models/default-usage-policies-by-endpoint" rel="external">pravidla uchování dat OpenAI API</a>.</p>
           </section>
@@ -186,9 +189,10 @@
           <section id="retention-deletion">
             <h3>Uchování a smazání</h3>
             <ul>
-              <li><strong>Lokální data šatníku:</strong> zůstávají v telefonu, dokud nesmažeš jednotlivé položky, nepoužiješ volbu „Smazat všechna lokální data“, nesmažeš účet z obrazovky Profil, neodinstaluješ aplikaci nebo neodstraníš příslušné zálohy u Apple.</li>
+              <li><strong>Lokální data šatníku:</strong> zůstávají v telefonu, dokud nesmažeš jednotlivé položky, nepoužiješ mazací akci v aplikaci, nesmažeš účet, neodinstaluješ aplikaci nebo neodstraníš příslušné zálohy u Apple.</li>
               <li><strong>Serverová data účtu:</strong> aplikační session, App Attest záznamy, stylový profil a pseudonymní účtový záznam zůstávají do expirace, obměny nebo do smazání účtu v aplikaci.</li>
-              <li><strong>Fotografie zpracované naším API:</strong> AI analytické fotografie se neuchovávají v databázi spotřeby ani aplikačních logách. Soukromé uploady obrázků, pokud je aplikace použije, jsou v R2 pod pseudonymním uživatelským prefixem a smažou se při smazání účtu. OpenAI může bezpečnostní data uchovávat až 30 dnů, jak je uvedeno výše.</li>
+              <li><strong>Záloha šatníku:</strong> po zapnutí zůstávají výsledné katalogové fotografie a údaje o kusech v privátním R2 pod pseudonymním účtem, dokud zálohu nevypneš, nesmažeš daný kus, nezvolíš „Smazat místní data a zálohu šatníku“ nebo nesmažeš účet. Vypnutí ponechá místní šatník a smaže cloudovou kopii. Samotná odinstalace aplikace zapnutou zálohu ponechá pro obnovení.</li>
+              <li><strong>Fotografie zpracované pro AI:</strong> zdrojové fotografie pro AI analýzu se neuchovávají v databázi spotřeby ani aplikačních logách. OpenAI může bezpečnostní data uchovávat až 30 dnů, jak je uvedeno výše.</li>
               <li><strong>Technické záznamy spotřeby:</strong> uchováváme nejvýše 90 dnů kvůli spolehlivosti, kontrole nákladů, bezpečnosti a řešení chyb, potom je smažeme.</li>
               <li><strong>Hashované záznamy omezení požadavků:</strong> uchováváme nejvýše 48 hodin, potom je smažeme.</li>
               <li><strong>E-mailová podpora:</strong> zprávy uchováváme po dobu nutnou k vyřešení požadavku, běžně nejvýše 24 měsíců od poslední komunikace, pokud zákon nevyžaduje delší dobu.</li>
@@ -198,11 +202,11 @@
 
           <section id="choices-rights">
             <h3>Tvoje volby a práva</h3>
-            <p>Sám rozhoduješ, zda Elnoly povolíš přístup k Fotkám, Fotoaparátu a Poloze. Oprávnění můžeš odvolat v Nastavení iOS a dál používat funkce, které je nepotřebují. V aplikaci lze smazat jednotlivé kusy, preference stylisty, všechna lokální data nebo celý účet Elnoly.</p>
+            <p>Sám rozhoduješ, zda Elnoly povolíš přístup k Fotkám, Fotoaparátu a Poloze a zda zapneš Zálohu šatníku. Oprávnění můžeš odvolat v Nastavení iOS, zálohu zapnout nebo vypnout v Profil → Soukromí a data a dál používat funkce, které je nepotřebují. V aplikaci lze smazat jednotlivé kusy, preference stylisty, místní data společně se zálohou šatníku nebo celý účet Elnoly.</p>
             <p>Podle země můžeš mít právo na přístup, opravu, výmaz, omezení či námitku proti zpracování; přenositelnost dat, pokud se uplatní; odvolání souhlasu a podání stížnosti u dozorového úřadu. Žádost pošli na <a href="mailto:Petr.salsa@icloud.com?subject=Elnoly%20-%20zadost%20o%20soukromi">Petr.salsa@icloud.com</a>.</p>
             <p>Pro vyhledání účtu při podpoře nebo žádosti o soukromí použij anonymní ID podpory zobrazené v Profilu po přihlášení přes Apple. Elnoly ukládá pseudonymní záznamy a neuchovává čitelnou Apple identitu, proto ID podpory pomáhá najít účet bez vyžadování fotografií šatníku nebo citlivých údajů.</p>
             <h4>Právní důvody</h4>
-            <p>Pokud se uplatní GDPR nebo podobný zákon, volitelná oprávnění a AI zpracování fotografií vycházejí z tvého požadavku a souhlasu; zpracování nutné k poskytnutí vyžádané funkce slouží k plnění služby; a omezené bezpečnostní, provozní a rate-limit záznamy vycházejí z oprávněného zájmu službu bezpečně provozovat a chránit. Souhlas můžeš odvolat odebráním oprávnění nebo nepoužitím volitelné funkce.</p>
+            <p>Pokud se uplatní GDPR nebo podobný zákon, volitelná oprávnění, záloha šatníku a AI zpracování fotografií vycházejí z tvého požadavku a souhlasu; zpracování nutné k poskytnutí vyžádané funkce slouží k plnění služby; a omezené bezpečnostní, provozní a rate-limit záznamy vycházejí z oprávněného zájmu službu bezpečně provozovat a chránit. Souhlas můžeš odvolat odebráním oprávnění, vypnutím zálohy nebo nepoužitím volitelné funkce.</p>
           </section>
 
           <section id="children">

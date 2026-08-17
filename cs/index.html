@@ -12,6 +12,8 @@
   <link rel="canonical" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/cs/">
   <link rel="alternate" hreflang="en" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/">
   <link rel="alternate" hreflang="cs" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/cs/">
+  <link rel="alternate" hreflang="ja" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/ja/">
+  <link rel="alternate" hreflang="ko" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/ko/">
   <link rel="stylesheet" href="../assets/styles.css">
   <script src="../assets/site.js" defer></script>
   <title>Elnoly — Zásady ochrany soukromí</title>
@@ -31,7 +33,7 @@
         Menu
       </button>
       <nav class="language-nav" aria-label="Jazyk">
-        <a href="../" lang="en">EN</a><span aria-hidden="true">/</span><a href="./" aria-current="page" lang="cs">CS</a>
+        <a href="../" lang="en">EN</a><span aria-hidden="true">/</span><a href="./" aria-current="page" lang="cs">CS</a><span aria-hidden="true">/</span><a href="../ja/" lang="ja">JA</a><span aria-hidden="true">/</span><a href="../ko/" lang="ko">KO</a>
       </nav>
       <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobilní navigace" data-mobile-nav>
         <a href="./" aria-current="page">Soukromí</a>
@@ -99,7 +101,7 @@
         <article class="policy-article">
           <div class="policy-heading">
             <h2 id="policy-title">Zásady ochrany soukromí</h2>
-            <p class="updated">Aktualizováno: 16. srpna 2026</p>
+            <p class="updated">Aktualizováno: 17. srpna 2026</p>
           </div>
 
           <details class="mobile-toc">
@@ -127,6 +129,7 @@
               <li>Fotografie šatníku a údaje o oblečení, například název, kategorie, barvy, vzor, materiál, značka, velikost, cena, datum nákupu, poznámky, oblíbené a archivace.</li>
               <li>Outfity, plánovaná data, historie nošení, počty použití a související poznámky.</li>
               <li>Reakce na doporučení, preference, volitelné strukturované profily proporcí a personal color, paměť stylisty, doporučení a lokálně uložené výsledky. Zdrojové fotografie použité k odhadu těchto profilů Elnoly neukládá.</li>
+              <li>Spravované rodinné profily vytvořené dospělým držitelem účtu: jméno nebo přezdívka, obecná věková skupina, volitelné velikosti, přiřazené kusy, fotografie a balicí plány. Profily nemají vlastní přihlášení a nejsou součástí Zálohy šatníku Elnoly.</li>
               <li>Stav předplatného poskytnutý přes Apple StoreKit. Údaje o platební kartě nedostáváme.</li>
               <li>Aplikační session, stav App Attest zařízení a ID podpory potřebné k používání a správě pseudonymního serverového účtu.</li>
             </ul>
@@ -136,8 +139,12 @@
             <ul>
               <li>Fotografie, které výslovně vybereš při použití AI rozpoznání oblečení, tvorby katalogového obrázku, volitelného profilu proporcí nebo volitelného odhadu personal color, a katalogové fotografie s údaji o kusech uložené po zapnutí zálohy a obnovy šatníku.</li>
               <li>Metadata oblečení a náhodná ID položek potřebná k doporučení outfitu. Doporučení stylisty neobsahuje fotografie šatníku.</li>
+              <li>Při změně jazyka aplikace se v omezených dávkách posílají k AI překladu názvy, typy, barvy, vzory, materiály, styly a sezóny uloženého oblečení. Značka slouží pouze jako kontext a má zůstat beze změny. Fotografie, poznámky, velikosti, ceny ani data nákupu se neposílají. Překlady se ukládají jen v iPhonu a nepřepisují původní údaje.</li>
+              <li>Zprávy, které pošleš AI stylistovi, omezená část nedávného chatu a kontext šatníku a preferencí potřebný k odpovědi. Text chatu zůstává v lokální historii a neukládá se do serverové paměti stylisty.</li>
+              <li>Omezený stylový profil a strukturovaná paměť stylisty pod pseudonymním účtem, například preference a interakce s náhodnými ID kusů. Neobsahují fotografie šatníku, názvy kusů ani text chatu.</li>
               <li>Kontext počasí, příležitost, stylové preference a informace o nedávném nošení potřebné pro vyžádané doporučení. Přesná poloha se na backend Elnoly neposílá.</li>
-              <li>Apple identity tokeny z přihlášení přes Apple se posílají do API Elnoly k ověření. Ukládáme jednosměrný HMAC hash Apple identifikátoru, ne Apple heslo ani platební údaje.</li>
+              <li>Apple identity tokeny z přihlášení přes Apple se posílají do API Elnoly k ověření. Ukládáme jednosměrné HMAC hashe Apple identifikátoru a, pokud jej Apple předá, e-mailové adresy účtu. Čitelný Apple e-mail, Apple heslo ani platební údaje neukládáme.</li>
+              <li>Záznamy o nákupech a nárocích potřebné k odemčení Premium a kreditů AI fotografií, například identifikátory produktu a transakce, datum nákupu, expirace nebo odvolání, prostředí a aktuální zůstatek. Platbu a údaje o kartě zpracovává Apple; Elnoly je nedostává.</li>
               <li>Provozní záznamy, například čas požadavku, operace, model, úspěch nebo chyba, ID požadavku poskytovatele, spotřeba tokenů, odhad nákladů a omezená odvozená pole analýzy oblečení.</li>
               <li>Jednosměrný hash síťové IP adresy seskupený do minutových oken, používaný pouze proti zneužití a nadměrnému počtu požadavků. Nezpracovanou IP adresu v aplikační databázi neukládáme.</li>
             </ul>
@@ -149,12 +156,16 @@
             <ul>
               <li><strong>Rozpoznání oblečení:</strong> vybraná fotografie se zpracuje pro rozpoznání viditelných kusů a jejich vlastností.</li>
               <li><strong>Katalogový obrázek:</strong> výřez kusu se zpracuje do čisté katalogové podoby a následně se porovná se zdrojem kvůli zachování identity oblečení.</li>
+              <li><strong>Metadata ručního katalogu:</strong> výřez i bílé pozadí vzniknou v iPhonu. Když použiješ bezplatné doplnění údajů, hotový výřez se jednorázově zpracuje pro návrh upravitelných údajů o oblečení; backend Elnoly ho neukládá.</li>
               <li><strong>Analýza inspirace:</strong> inspirační obrázek, který vybereš, se jednorázově zpracuje pro získání stylových signálů. Backend Elnoly ho neukládá.</li>
               <li><strong>Profil proporcí:</strong> pokud výslovně zvolíš odhad z fotografie, jedna fotografie celé postavy se jednorázově zpracuje na široké proporce užitečné pro oblečení. Elnoly fotografii neukládá; v iPhonu zůstane jen omezený strukturovaný profil používaný jako měkké stylingové vodítko.</li>
               <li><strong>Odhad personal color:</strong> pokud si ho výslovně vyžádáš, jedna fotografie obličeje a krku zpředu se jednorázově zpracuje na orientační 12sezónní barevný typ a míru jistoty. Elnoly fotografii neukládá; v iPhonu zůstane jen strukturovaný odhad. Funkce tě neidentifikuje a neodvozuje etnicitu, zdraví ani atraktivitu; kdykoli ji lze nahradit ručně zadaným profesionálním výsledkem.</li>
               <li><strong>Import produktu:</strong> při vložení veřejného odkazu na e-shop API Elnoly načte veřejnou produktovou stránku a metadata obrázku, aby šlo položku zkontrolovat nebo posoudit.</li>
               <li><strong>Outfitový stylista:</strong> zpracují se metadata předvybraných kusů, náhodná ID, kontext počasí, příležitost a relevantní preference. Fotografie šatníku se stylistovi neposílají.</li>
+              <li><strong>Chat a plánování stylisty:</strong> zpracuje se tvoje zpráva nebo požadavek na plán, omezený nedávný kontext, metadata použitelných kusů a relevantní preference. Celé zprávy zůstávají lokálně a nepřidávají se do serverové paměti stylisty.</li>
+              <li><strong>Překlad šatníku:</strong> po volbě jiného jazyka aplikace se vybraná textová pole uložených kusů překládají v omezených dávkách. Fotografie šatníku se nepřikládají a přeložené zobrazení zůstává v iPhonu.</li>
               <li><strong>Optická kontrola outfitu:</strong> při vizuální kontrole vygenerovaného nebo ručně složeného outfitu aplikace vytvoří dočasný náhled z katalogových fotografií na bílém pozadí a pošle ho AI bez fotografie osoby. Náhled se neukládá do zálohy šatníku ani databáze spotřeby.</li>
+              <li><strong>Spravované rodinné šatníky:</strong> dospělý může založit lokální profil dítěte nebo jiného člena rodiny. Když výslovně použije katalogovou AI, vybraná fotografie se zpracuje pod účtem dospělého pouze s obecným údajem dítě, dospívající nebo dospělý. Jméno člena, přesný věk ani ID profilu se neposílají.</li>
             </ul>
             <div class="notice">
               <p><strong>Fotografie se neukládají do databáze spotřeby Elnoly ani do aplikačních logů.</strong> Zdrojové fotografie pro AI analýzu a katalogové požadavky projdou pamětí serveru pouze pro splnění požadavku. Když zapneš Zálohu šatníku, výsledné katalogové fotografie se ukládají do privátního Cloudflare R2 bucketu <code>elnoly-images</code> pod tvým pseudonymním uživatelským prefixem. Samotné zálohování je neposílá OpenAI.</p>
@@ -176,7 +187,7 @@
                 <thead><tr><th>Poskytovatel</th><th>Účel</th><th>Zapojené údaje</th></tr></thead>
                 <tbody>
                   <tr><td>Cloudflare</td><td>Hosting API, šifrovaný přenos, podpora ověření App Attest, omezení požadavků, D1 databáze, privátní R2 úložiště a zabezpečení</td><td>Požadavky, vybraný AI obsah při přenosu, technické záznamy, pseudonymní účtové záznamy, hashovaný síťový identifikátor a soukromé uploadované obrázky, pokud je aplikace použije</td></tr>
-                  <tr><td>OpenAI</td><td>Rozpoznání oblečení, katalogové zpracování, ověření shody a doporučení outfitů</td><td>Vybrané fotografie nebo minimum metadat šatníku potřebné pro vyžádanou AI funkci</td></tr>
+                  <tr><td>OpenAI</td><td>Rozpoznání oblečení a inspirací, katalogové zpracování, kontrola shody oblečení, překlad šatníku, chat stylisty a doporučení outfitů</td><td>Vybrané fotografie, zprávy nebo minimum metadat šatníku a kontextu preferencí potřebné pro vyžádanou AI funkci</td></tr>
                   <tr><td>Apple</td><td>Oprávnění k poloze, WeatherKit, nákupy přes StoreKit a volitelné zálohy zařízení</td><td>Poloha pro počasí, nákupní transakce a zálohovaná data podle nastavení Apple</td></tr>
                   <tr><td>Open-Meteo</td><td>Záložní předpověď počasí, když WeatherKit není dostupný</td><td>Přibližná zaokrouhlená poloha odeslaná přímo z aplikace</td></tr>
                   <tr><td>GitHub</td><td>Hosting tohoto veřejného webu se zásadami a podporou</td><td>GitHub z bezpečnostních důvodů zaznamenává IP návštěvníků; tento web nepřidává analytiku ani reklamní sledování</td></tr>
@@ -190,7 +201,7 @@
             <h3>Uchování a smazání</h3>
             <ul>
               <li><strong>Lokální data šatníku:</strong> zůstávají v telefonu, dokud nesmažeš jednotlivé položky, nepoužiješ mazací akci v aplikaci, nesmažeš účet, neodinstaluješ aplikaci nebo neodstraníš příslušné zálohy u Apple.</li>
-              <li><strong>Serverová data účtu:</strong> aplikační session, App Attest záznamy, stylový profil a pseudonymní účtový záznam zůstávají do expirace, obměny nebo do smazání účtu v aplikaci.</li>
+              <li><strong>Serverová data účtu:</strong> aplikační session, App Attest záznamy, stylový profil, strukturovaná paměť stylisty, nároky z nákupů a odkazy na transakce a pseudonymní účtový záznam zůstávají po dobu nutnou k poskytování služby, do expirace nebo obměny či do smazání účtu, s výhradou zákonného uchování nákupních a bezpečnostních záznamů.</li>
               <li><strong>Záloha šatníku:</strong> po zapnutí zůstávají výsledné katalogové fotografie a údaje o kusech v privátním R2 pod pseudonymním účtem, dokud zálohu nevypneš, nesmažeš daný kus, nezvolíš „Smazat místní data a zálohu šatníku“ nebo nesmažeš účet. Vypnutí ponechá místní šatník a smaže cloudovou kopii. Samotná odinstalace aplikace zapnutou zálohu ponechá pro obnovení.</li>
               <li><strong>Fotografie zpracované pro AI:</strong> zdrojové fotografie pro AI analýzu se neuchovávají v databázi spotřeby ani aplikačních logách. OpenAI může bezpečnostní data uchovávat až 30 dnů, jak je uvedeno výše.</li>
               <li><strong>Technické záznamy spotřeby:</strong> uchováváme nejvýše 90 dnů kvůli spolehlivosti, kontrole nákladů, bezpečnosti a řešení chyb, potom je smažeme.</li>
@@ -211,7 +222,8 @@
 
           <section id="children">
             <h3>Děti</h3>
-            <p>Elnoly není určena dětem mladším 13 let ani nižšího věku stanoveného místním právem. Osobní údaje dětí vědomě neshromažďujeme. Pokud se domníváš, že nám dítě osobní údaje poskytlo, kontaktuj nás a podle potřeby je prověříme a smažeme.</p>
+            <p>Elnoly není určená dětem a dítě si nevytváří samostatný účet Elnoly. Dospělý držitel účtu může vytvořit spravovaný lokální profil dítěte nebo jiného člena rodiny. Profil ovládá dospělý a může ho smazat v Profil → Aktivní šatník → Spravovat členy.</p>
+            <p>Jméno nebo přezdívka, obecná věková skupina, volitelné velikosti, kusy, katalogové fotografie a balicí plány zůstávají v iPhonu dospělého a nejsou součástí Zálohy šatníku Elnoly. Když dospělý výslovně spustí katalogovou AI, fotografie se dočasně zpracuje pod jeho účtem jen s obecným údajem dítě, dospívající nebo dospělý; jméno, přesný věk ani ID profilu se neposílají. Kontaktuj nás, pokud se domníváš, že byly údaje poskytnuty bez odpovídajícího oprávnění dospělého.</p>
           </section>
 
           <section id="changes">

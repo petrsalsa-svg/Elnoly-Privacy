@@ -12,6 +12,8 @@
   <link rel="canonical" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/">
   <link rel="alternate" hreflang="en" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/">
   <link rel="alternate" hreflang="cs" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/cs/">
+  <link rel="alternate" hreflang="ja" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/ja/">
+  <link rel="alternate" hreflang="ko" href="https://petrsalsa-svg.github.io/Elnoly-Privacy/ko/">
   <link rel="stylesheet" href="./assets/styles.css">
   <script src="./assets/site.js" defer></script>
   <title>Elnoly — Privacy Policy</title>
@@ -31,7 +33,7 @@
         Menu
       </button>
       <nav class="language-nav" aria-label="Language">
-        <a href="./" aria-current="page" lang="en">EN</a><span aria-hidden="true">/</span><a href="./cs/" lang="cs">CS</a>
+        <a href="./" aria-current="page" lang="en">EN</a><span aria-hidden="true">/</span><a href="./cs/" lang="cs">CS</a><span aria-hidden="true">/</span><a href="./ja/" lang="ja">JA</a><span aria-hidden="true">/</span><a href="./ko/" lang="ko">KO</a>
       </nav>
       <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" data-mobile-nav>
         <a href="./" aria-current="page">Privacy</a>
@@ -99,7 +101,7 @@
         <article class="policy-article">
           <div class="policy-heading">
             <h2 id="policy-title">Privacy Policy</h2>
-            <p class="updated">Last updated: August 16, 2026</p>
+            <p class="updated">Last updated: August 17, 2026</p>
           </div>
 
           <details class="mobile-toc">
@@ -127,6 +129,7 @@
               <li>Wardrobe photos and garment details such as names, categories, colors, patterns, materials, brands, sizes, prices, purchase dates, notes, favorites, and archive status.</li>
               <li>Outfits, planning dates, wear history, item usage counts, and related notes.</li>
               <li>Style interactions, preferences, optional structured body-proportion and personal-color profiles, stylist memory, recommendations, and locally cached results. The source photos used to estimate those profiles are not saved by Elnoly.</li>
+              <li>Managed family profiles created by an adult account holder, including a name or nickname, broad age group, optional sizes, assigned garments, photos, and packing plans. These profiles have no separate login and are excluded from Elnoly Wardrobe Backup.</li>
               <li>Purchase entitlement status supplied through Apple StoreKit. We do not receive your payment card details.</li>
               <li>The app session, App Attest device state, and support ID needed to use and manage the pseudonymous server account.</li>
             </ul>
@@ -136,8 +139,12 @@
             <ul>
               <li>Photos you intentionally select when using AI clothing analysis, catalog-image creation, an optional body-proportion profile, or an optional personal-color estimate, plus catalog photos and garment details stored when you enable wardrobe backup and restoration.</li>
               <li>Garment metadata and random item identifiers needed to generate outfit recommendations. Stylist requests do not include wardrobe photos.</li>
+              <li>When you change the app language, garment names, types, colors, patterns, materials, styles, and seasons are sent in limited batches for AI translation. Brands are supplied only as translation context and should remain unchanged. Photos, notes, sizes, prices, and purchase dates are not sent. Translations are cached only on your iPhone and do not overwrite the original wardrobe data.</li>
+              <li>Messages you send to the AI stylist, up to a limited amount of recent chat context, and the wardrobe and preference context needed to answer. Chat text stays in the local conversation history and is not stored in the server-side stylist memory.</li>
+              <li>A limited server-side style profile and structured stylist memory under the pseudonymous account, including preferences and interactions with random item IDs. It does not contain wardrobe photos, garment names, or chat text.</li>
               <li>Weather context, occasion, style preferences, and recent-wear information needed for a requested recommendation. Exact location is not sent to the Elnoly backend.</li>
-              <li>Sign in with Apple identity tokens are sent to the Elnoly API for verification. We store a one-way HMAC hash of the Apple user identifier, not your Apple password or payment details.</li>
+              <li>Sign in with Apple identity tokens are sent to the Elnoly API for verification. We store one-way HMAC hashes of the Apple user identifier and, when Apple supplies it, the account email address. We do not store a readable Apple email, Apple password, or payment details.</li>
+              <li>Purchase and entitlement records needed to grant Premium and AI-photo credits, such as product and transaction identifiers, purchase, expiration or revocation dates, environment, and current balance. Apple processes payment-card details; Elnoly does not receive them.</li>
               <li>Operational records such as request time, operation, model, success or error status, provider request ID, token usage, estimated cost, and limited derived clothing-analysis fields.</li>
               <li>A one-way hash of the network IP address, grouped into one-minute windows, used only to prevent abuse and excessive requests. We do not store the raw IP address in our application database.</li>
             </ul>
@@ -149,12 +156,16 @@
             <ul>
               <li><strong>Clothing analysis:</strong> the selected photo is processed to identify visible garments and their attributes.</li>
               <li><strong>Catalog-image creation:</strong> a selected garment crop is processed to produce a clean catalog presentation and checked against the source for identity consistency.</li>
+              <li><strong>Manual catalog metadata:</strong> the cutout and white background are created on your iPhone. If you use the free metadata helper, the finished cutout is processed once to suggest editable garment details; it is not stored by the Elnoly backend.</li>
               <li><strong>Inspiration analysis:</strong> an inspiration image you choose is analyzed once to extract style signals. The image is not stored by the Elnoly backend.</li>
               <li><strong>Body-proportion profile:</strong> if you explicitly choose photo estimation, one full-body photo is processed once to derive broad clothing-relevant proportions. Elnoly does not store the photo; only a limited structured profile remains on your iPhone and is used as soft styling guidance.</li>
               <li><strong>Personal-color estimate:</strong> if you explicitly request it, one front-facing photo of your face and neck is processed once to estimate a 12-season color type and confidence. Elnoly does not store the photo; only the structured estimate remains on your iPhone. The feature does not identify you or infer ethnicity, health, or attractiveness, and a manually entered professional result can replace it at any time.</li>
               <li><strong>Product import:</strong> when you paste a public shop link, the Elnoly API fetches the public product page and image metadata to help you review or assess the item.</li>
               <li><strong>Outfit stylist:</strong> shortlisted garment metadata, random item IDs, weather context, occasion, and relevant preferences are processed. Wardrobe photos are not sent for stylist recommendations.</li>
+              <li><strong>Stylist chat and planning:</strong> your message or planning request, recent limited context, eligible wardrobe metadata, and relevant preferences are processed to answer or create a plan. Full chat messages remain local and are not added to server-side stylist memory.</li>
+              <li><strong>Wardrobe translation:</strong> after you choose another app language, selected text fields from saved garments are translated in limited batches. No wardrobe photo is included and the translated display copy remains on your iPhone.</li>
               <li><strong>Visual outfit review:</strong> when a generated or manually composed outfit is visually checked, the app creates a temporary white-background preview from catalog photos and sends that preview to the AI without a photo of a person. The preview is not stored in the wardrobe backup or usage database.</li>
+              <li><strong>Managed family wardrobes:</strong> an adult may create a local profile for a child or another family member. If the adult explicitly uses catalog AI, the selected photo is processed under the adult account with only the broad audience value child, teenager, or adult. The member name, exact age, and profile ID are not sent.</li>
             </ul>
             <div class="notice">
               <p><strong>Photos are not stored in the Elnoly usage database or written to application logs.</strong> Source photos used for AI analysis and catalog requests pass through server memory only to fulfill the request. If you turn on Wardrobe Backup, final catalog photos are stored in the private Cloudflare R2 bucket <code>elnoly-images</code> under your pseudonymous user prefix. They are not sent to OpenAI merely because they are backed up.</p>
@@ -176,7 +187,7 @@
                 <thead><tr><th>Provider</th><th>Purpose</th><th>Information involved</th></tr></thead>
                 <tbody>
                   <tr><td>Cloudflare</td><td>API hosting, encrypted transport, App Attest verification support, rate limiting, D1 database, private R2 storage, and security</td><td>Requests, selected AI content in transit, technical records, pseudonymous account records, hashed network identifier, and private uploaded images when used</td></tr>
-                  <tr><td>OpenAI</td><td>Clothing analysis, catalog-image processing, identity verification, and outfit recommendations</td><td>Selected photos or the minimum wardrobe metadata needed for the requested AI feature</td></tr>
+                  <tr><td>OpenAI</td><td>Clothing and inspiration analysis, catalog-image processing, garment consistency checks, wardrobe translation, stylist chat, and outfit recommendations</td><td>Selected photos, messages, or the minimum wardrobe metadata and preference context needed for the requested AI feature</td></tr>
                   <tr><td>Apple</td><td>Location permission, WeatherKit forecasts, StoreKit purchases, and optional device backups</td><td>Location for weather, purchase transactions, and backup data according to your Apple settings</td></tr>
                   <tr><td>Open-Meteo</td><td>Fallback weather forecasts when WeatherKit is unavailable</td><td>Approximate rounded location sent directly from the app</td></tr>
                   <tr><td>GitHub</td><td>Hosting this public privacy and support website</td><td>GitHub logs visitor IP addresses for security; this website adds no analytics or advertising trackers</td></tr>
@@ -190,7 +201,7 @@
             <h3>Retention and deletion</h3>
             <ul>
               <li><strong>Local wardrobe data:</strong> remains on your device until you delete individual items, use the in-app deletion action, delete your account, uninstall the app, or remove applicable backups through Apple.</li>
-              <li><strong>Server account data:</strong> app sessions, App Attest records, style profile data, and the pseudonymous account record remain until they expire, are rotated, or you delete your account in the app.</li>
+              <li><strong>Server account data:</strong> app sessions, App Attest records, style profile, structured stylist memory, purchase entitlements and transaction references, and the pseudonymous account record remain while needed to provide the service, until they expire or are rotated, or until you delete your account, subject to legal retention requirements for purchase and security records.</li>
               <li><strong>Wardrobe backup:</strong> when enabled, final catalog photos and garment details remain in private R2 storage under your pseudonymous account until you turn the backup off, delete the related item, choose “Delete local data and wardrobe backup,” or delete your account. Turning backup off keeps the local wardrobe and deletes the cloud copy. Uninstalling the app alone leaves an enabled backup available for restoration.</li>
               <li><strong>Photos handled for AI:</strong> source photos used for AI analysis are not retained in our usage database or application logs. OpenAI may retain abuse-monitoring data for up to 30 days as described above.</li>
               <li><strong>Technical usage records:</strong> are retained for up to 90 days for reliability, cost control, security, and troubleshooting, then deleted.</li>
@@ -211,7 +222,8 @@
 
           <section id="children">
             <h3>Children</h3>
-            <p>Elnoly is not directed to children under 13 or the minimum age required by local law. We do not knowingly collect personal data from children. If you believe a child has provided personal data, contact us and we will investigate and delete it where required.</p>
+            <p>Elnoly is not directed to children and a child does not create a separate Elnoly account. An adult account holder may create a managed local wardrobe profile for a child or another family member. The adult controls the profile and can delete it in Profile → Active Wardrobe → Manage Family Members.</p>
+            <p>The profile name or nickname, broad age group, optional sizes, garments, catalog photos, and packing plans remain on the adult’s iPhone and are excluded from Elnoly Wardrobe Backup. If the adult explicitly invokes catalog AI, the selected photo is processed temporarily under the adult account with only a broad child, teenager, or adult value; the member’s name, exact age, and profile ID are not sent. Contact us if you believe information was provided without appropriate adult authority.</p>
           </section>
 
           <section id="changes">
